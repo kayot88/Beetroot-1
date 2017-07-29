@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.header {
+  height: 650px;
+  background: url('./../img/header-background.png') center no-repeat;
+  padding-top: 36px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__nav-item {
+  padding: 0 50px;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+  font-size: 16px;
+}
+
+.header__nav-item:hover {
+  color: #48bf72;
+}
+
+.header__nav-item:after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 22px;
+  background-color: #fff;
+  opacity: 0.4;
+  top: 50%;
+  right: 0;
+  transform: rotate(15deg) translateY(-50%);
+
+}
+
+.header__nav-item:last-of-type {
+  padding-right: 0;
+  position: static;
+}
+
+.header__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(650px - 38px - 100px);
+}
+
+.header__title {
+  font-size: 46px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+}
+
+.header__subtitle {
+  font-size: 30px;
+  color: #fff;
+  text-transform: uppercase;
+  opacity: 0.7;
+  margin-bottom: 45px;
+}
+
+.header__btn {
+  width: 138px;
+  height: 40px;
+  border: 2px solid #48bf72;
+  border-radius: 2px;
+  background-color: transparent;
+  color: #48bf72;
+  text-transform: uppercase;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.header__btn:hover {
+  background-color: #48bf72;
+  color: #fff;
+}
+
+.portfolio__item {
+  position: relative;
+  max-width: 450px;
+}
+
+.portfolio__item:hover > .portfolio__overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.portfolio__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  pointer-events: none;
+}

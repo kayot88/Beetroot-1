@@ -1,0 +1,45 @@
+button {
+  font-size: 300px;
+  color: red;
+}
+
+button:hover {
+  font-size: 60px;
+  color: blue;
+}
+
+.container {
+  width: 500px;
+  height: 500px;
+  background-color: #eee;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.block {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  background-color: green;
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+  /* line-height: 200px; */
+  /* padding: 90px 10px; */
+  /* vertical-align: middle; */
+  
+
+
+  
+}
+
+.block__title {
+    /* max-width: 100%;
+    white-space: nowrap;
+     text-overflow: ellipsis; 
+    overflow: hidden; */
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+  }
