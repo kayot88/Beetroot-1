@@ -1,0 +1,154 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+  *:before, *:after {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+@font-face {
+  font-family: 'Conv_Raleway-Black';
+  src: url("../fonts/Raleway-Black.eot");
+  src: local("☺"), url("../fonts/Raleway-Black.woff") format("woff"), url("../fonts/Raleway-Black.ttf") format("truetype"), url("../fonts/Raleway-Black.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  color: #303030;
+  min-width: 320px;
+  overflow-x: hidden;
+  background-color: #eee; }
+
+a {
+  color: #303030; }
+
+/* section PRODUCT  */
+.product {
+  padding: 100px 15px; }
+  .product__container {
+    margin: 0 auto;
+    max-width: 1200px;
+    background-color: #fff;
+    padding: 100px 70px 35px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); }
+    @media (max-width: 767px) {
+      .product__container {
+        padding: 100px 15px 35px; } }
+  .product__title {
+    font-size: 48px;
+    font-family: 'Conv_Raleway-Black';
+    letter-spacing: 0.025em;
+    text-align: center;
+    margin-bottom: 35px;
+    position: relative; }
+    .product__title:after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: -20px;
+      width: 213px;
+      height: 17px;
+      background: url("../img/decor-line.png") no-repeat center;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%); }
+  .product__description {
+    max-width: 565px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 0.025em;
+    line-height: 1.2;
+    margin-bottom: 70px; }
+  .product__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .product__item {
+    max-width: calc((100% - 70px)/3);
+    height: 390px;
+    overflow: hidden;
+    margin-bottom: 35px;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer; }
+    @media (max-width: 1100px) {
+      .product__item {
+        max-width: calc((100% - 35px)/2);
+        height: 300px; } }
+    @media (max-width: 767px) {
+      .product__item {
+        max-width: 100%;
+        width: 100%;
+        height: 200px; } }
+    .product__item--large {
+      max-width: calc(100% - 35px - (100% - 70px)/3); }
+      @media (max-width: 1100px) {
+        .product__item--large {
+          max-width: calc(100% - 35px - (100% - 35px)/2); } }
+      @media (max-width: 767px) {
+        .product__item--large {
+          max-width: 100%;
+          width: 100%; } }
+    .product__item:hover .product__item-overlay {
+      opacity: 1;
+      pointer-events: auto; }
+    .product__item img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+         object-fit: cover; }
+  .product__item-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(225, 0, 17, 0.5);
+    top: 0;
+    left: 0;
+    padding: 35px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out; }
+  .product__overlay-title {
+    color: #fff;
+    font-size: 30px; }
+  .product__overlay-link {
+    color: #fff;
+    font-size: 30px;
+    padding-bottom: 16px;
+    position: relative; }
+    .product__overlay-link:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 96px;
+      height: 5px;
+      background-color: #fff; }
+
+/*# sourceMappingURL=main.css.map */
