@@ -1,0 +1,28 @@
+@mixin transition($time: 0.3s) {
+  transition: all $time ease-in-out;
+}
+
+@mixin hover-btn-1($color) {
+  background-color: $color;
+  &:hover {
+    background-color: darken($color, 30%);
+  }
+}
+
+@mixin hover-btn-2($color, $text-color) {
+  background-color: $color;
+  border-color: $color;
+  color: $text-color;
+  &:hover {
+    background-color: #fff;
+    color: $color;
+  }
+}
+
+@mixin text-elipsis($width) {
+    max-width: $width;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}

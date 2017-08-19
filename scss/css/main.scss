@@ -1,0 +1,81 @@
+@import './_mixins.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-container {
+  max-width: 1300px;
+  padding: 50px 15px;
+  margin: 0 auto;
+}
+
+.btn {
+  width: 150px;
+  height: 40px;
+  border: 1px solid #333;
+  border-radius: 3px;
+  background-color: transparent;
+  font-size: 18px;
+  cursor: pointer;
+  @include transition;
+  &--green {
+    @include hover-btn-2(green, #333);
+  }
+  &--blue {
+    @include hover-btn-1(yellow);
+  }
+}
+
+.text-container {
+  margin-top: 20px;
+  &__message {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+  margin-bottom: 20px;
+    &--success {
+      border-color: green;
+    }
+    &--error {
+      border-color: red;
+    }
+    &--warning {
+      border-color: yellow;
+    }
+    &--relative {
+      width: 100%;
+      height: 500px;
+      background-color: #333;
+      color: #fff;
+      font-size: 50px;
+      position: relative;
+      padding-right: 215px;
+      & > p {
+        @include text-elipsis(95%);
+      }
+    }
+    &--absolute {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      top: 0;
+      right: 0;
+      background-color: green;
+      color: blue;
+      font-size: 50px;
+      @include text-elipsis(200px);
+    }
+    &--fixed {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      right: 50px;
+      bottom: 50px;
+      position: fixed;
+      font-size: 20px;
+    }
+  }
+}

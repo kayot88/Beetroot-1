@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.main-container {
+  max-width: 1300px;
+  padding: 50px 15px;
+  margin: 0 auto; }
+
+.btn {
+  width: 150px;
+  height: 40px;
+  border: 1px solid #333;
+  border-radius: 3px;
+  background-color: transparent;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out; }
+  .btn--green {
+    background-color: green;
+    border-color: green;
+    color: #333; }
+    .btn--green:hover {
+      background-color: #fff;
+      color: green; }
+  .btn--blue {
+    background-color: yellow; }
+    .btn--blue:hover {
+      background-color: #666600; }
+
+.text-container {
+  margin-top: 20px; }
+  .text-container__message {
+    border: 1px solid #ccc;
+    padding: 10px;
+    color: #333;
+    margin-bottom: 20px; }
+    .text-container__message--success {
+      border-color: green; }
+    .text-container__message--error {
+      border-color: red; }
+    .text-container__message--warning {
+      border-color: yellow; }
+    .text-container__message--relative {
+      width: 100%;
+      height: 500px;
+      background-color: #333;
+      color: #fff;
+      font-size: 50px;
+      position: relative;
+      padding-right: 215px; }
+      .text-container__message--relative > p {
+        max-width: 95%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block; }
+    .text-container__message--absolute {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      top: 0;
+      right: 0;
+      background-color: green;
+      color: blue;
+      font-size: 50px;
+      max-width: 200px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block; }
+    .text-container__message--fixed {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      right: 50px;
+      bottom: 50px;
+      position: fixed;
+      font-size: 20px; }
+
+/*# sourceMappingURL=main.css.map */
