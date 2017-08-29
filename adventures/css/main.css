@@ -1,0 +1,28 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+.section-whoweare {
+  text-align: center;
+  background: #fff;
+  padding: 90px 15px; }
+
+.whoweare__title {
+  margin-bottom: 50px; }
+.whoweare__description {
+  margin-bottom: 50px; }
+.whoweare__container {
+  max-width: 1142px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between; }
+.whoweare__dropdown, .whoweare__graph {
+  width: calc((100% - 30px)/2); }
+.whoweare__graph-item {
+  text-align: left;
+  padding: 10px 15px;
+  border: 1px solid #d7d7d7;
+  color: #fff; }
+
+/*# sourceMappingURL=main.css.map */
