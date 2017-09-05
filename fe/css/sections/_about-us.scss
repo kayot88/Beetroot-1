@@ -67,10 +67,10 @@
     }
   }
   &__menu {
+    margin-bottom: 90px;
     ul {
       display: flex;
       li {
-       
         a {
           display: block;
            margin-right: 2px;
@@ -78,13 +78,15 @@
             background-color: #eaeaea;
           span {
             display: inline-block;
-            padding: 20px 25px;
+            padding: 20px 30px;
             color: $darkGray;
             font-size: 20px;
             text-transform: uppercase;
             transform: skewX(15deg);
+            @include transition(0.4s);
           }
-           &.active {
+           &.active,
+           &:hover {
                 background-color: $blue;
               span {
                 color: $white;
@@ -92,8 +94,71 @@
               }
           }
         }
-      
       }
     }
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  &__item {
+    width: 50%;
+    padding: 30px;
+    border-bottom: 1px solid #d1d1d1;
+    border-right: 1px solid #d1d1d1;
+    display: flex;
+    &:nth-of-type(2) {
+      border-right: none;
+    }
+    &:nth-of-type(3) {
+      border-bottom: none;
+    }
+    &:nth-of-type(4) {
+      border-right: none;
+      border-bottom: none;
+    }
+  }
+  &__item-icon {
+    width: 106px;
+    height: 106px;
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin-right: 40px;
+    transform: skewX(-10deg);
+    @include transition(0.3s);
+    cursor: pointer;
+    &:hover {
+      background-color: $blue;
+    }
+    i.fa {
+      color: $white;
+      font-size: 70px;
+      transform: skewX(10deg);
+    }
+  }
+  &__item-title {
+    font-size: 20px;
+    color: $darkGray;
+    margin-bottom: 15px;
+    font-weight: 700;
+  }
+  &__item-description {
+    font-size: 16px;
+    color: $lightGray;
+    line-height: 1.2;
+  }
+  &__item-center-transparent {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: $white;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 }

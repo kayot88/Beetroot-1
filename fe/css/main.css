@@ -295,24 +295,125 @@ main {
         top: 0;
         left: 1px;
         transform: skewX(-15deg); }
-  .about-us__menu ul {
+  .about-us__menu {
+    margin-bottom: 90px; }
+    .about-us__menu ul {
+      display: flex; }
+      .about-us__menu ul li a {
+        display: block;
+        margin-right: 2px;
+        transform: skewX(-15deg);
+        background-color: #eaeaea; }
+        .about-us__menu ul li a span {
+          display: inline-block;
+          padding: 20px 30px;
+          color: #333333;
+          font-size: 20px;
+          text-transform: uppercase;
+          transform: skewX(15deg);
+          transition-property: all;
+          transition-duration: 0.4s;
+          transition-timing-function: ease-in-out; }
+        .about-us__menu ul li a.active, .about-us__menu ul li a:hover {
+          background-color: #00ccff; }
+          .about-us__menu ul li a.active span, .about-us__menu ul li a:hover span {
+            color: #fff;
+            font-size: 20px; }
+  .about-us__list {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative; }
+  .about-us__item {
+    width: 50%;
+    padding: 30px;
+    border-bottom: 1px solid #d1d1d1;
+    border-right: 1px solid #d1d1d1;
     display: flex; }
-    .about-us__menu ul li a {
-      display: block;
-      margin-right: 2px;
-      transform: skewX(-15deg);
-      background-color: #eaeaea; }
-      .about-us__menu ul li a span {
-        display: inline-block;
-        padding: 20px 25px;
-        color: #333333;
-        font-size: 20px;
-        text-transform: uppercase;
-        transform: skewX(15deg); }
-      .about-us__menu ul li a.active {
-        background-color: #00ccff; }
-        .about-us__menu ul li a.active span {
-          color: #fff;
-          font-size: 20px; }
+    .about-us__item:nth-of-type(2) {
+      border-right: none; }
+    .about-us__item:nth-of-type(3) {
+      border-bottom: none; }
+    .about-us__item:nth-of-type(4) {
+      border-right: none;
+      border-bottom: none; }
+  .about-us__item-icon {
+    width: 106px;
+    height: 106px;
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin-right: 40px;
+    transform: skewX(-10deg);
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    cursor: pointer; }
+    .about-us__item-icon:hover {
+      background-color: #00ccff; }
+    .about-us__item-icon i.fa {
+      color: #fff;
+      font-size: 70px;
+      transform: skewX(10deg); }
+  .about-us__item-title {
+    font-size: 20px;
+    color: #333333;
+    margin-bottom: 15px;
+    font-weight: 700; }
+  .about-us__item-description {
+    font-size: 16px;
+    color: #999999;
+    line-height: 1.2; }
+  .about-us__item-center-transparent {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+
+.our-skills {
+  padding: 120px 0;
+  background-color: #f7f7f7;
+  text-align: center; }
+  .our-skills__title {
+    font-size: 24px;
+    color: #333333;
+    font-weight: 900;
+    margin-bottom: 40px;
+    text-transform: uppercase; }
+  .our-skills__description {
+    font-size: 16px;
+    color: #333333;
+    line-height: 1.3;
+    max-width: 550px;
+    margin: 0 auto 10px; }
+  .our-skills__list {
+    display: flex;
+    justify-content: space-between; }
+  .our-skills__item {
+    flex: 1;
+    margin-right: 25px;
+    text-align: center; }
+    .our-skills__item:last-of-type {
+      margin-right: 0; }
+  .our-skills__chart .number {
+    font-size: 30px !important; }
+  .our-skills__chart .timer {
+    fill: #333333; }
+  .our-skills__chart {
+    margin-bottom: 10px; }
+  .our-skills__item-title {
+    font-size: 20px;
+    color: #333333;
+    margin-bottom: 15px;
+    text-transform: uppercase; }
+  .our-skills__item-description {
+    font-size: 16px;
+    color: #999999;
+    line-height: 1.2; }
 
 /*# sourceMappingURL=main.css.map */
