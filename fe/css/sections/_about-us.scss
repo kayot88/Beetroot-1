@@ -17,11 +17,19 @@
     span {
       color: $orange;
     }
+    &--white {
+      span {
+        color: #fff;
+      }
+    }
   }
   &__description {
     font-size: 18px;
     color: $gray;
     font-style: italic;
+    &--white {
+      color: $white;
+    }
   }
   &__text {
     max-width: 630px;
@@ -63,6 +71,11 @@
         top: 0;
         left: 1px;
         transform: skewX(-15deg);
+      }
+    }
+    &--white {
+      p {
+        color: #fff;
       }
     }
   }

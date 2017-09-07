@@ -57,6 +57,12 @@
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 0);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 0);
     z-index: -1;
+    &--our-team {
+      height: 200px;
+      bottom: -60px;
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 25%);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 25%);
+    }
   }
 }
 
