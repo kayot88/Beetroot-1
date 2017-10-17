@@ -13,6 +13,8 @@ const htmlmin = require('gulp-htmlmin');
 
 /* Plugin for SASS*/
 const sass = require('gulp-sass');
+const autoprefixer = require('gulp-autoprefixer');
+const sourcemaps = require('gulp-sourcemaps');
 
 /* Plugin for JS*/
 const concat = require('gulp-concat');
@@ -37,7 +39,13 @@ gulp.task('html', () => {
 /*Task for CSS*/
 gulp.task('css', () => {
   gulp.src('./src/styles/main.scss')
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+    .pipe(sourcemaps.init())
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false
+    }))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./build/css'))
     .pipe(reload({ stream: true }));
 });
@@ -45,6 +53,8 @@ gulp.task('css', () => {
 /*Task for JS*/
 gulp.task('js', () => {
   gulp.src([
+    './src/vendor/jquery/dist/jquery.min.js',
+    './src/vendor/slick/dist/slick.js',
     './src/js/parts/first.js',
     './src/js/parts/second.js'
   ])
