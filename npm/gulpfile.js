@@ -15,6 +15,7 @@ const htmlmin = require('gulp-htmlmin');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const sourcemaps = require('gulp-sourcemaps');
+const notify = require("gulp-notify");
 
 /* Plugin for JS*/
 const concat = require('gulp-concat');
@@ -39,8 +40,11 @@ gulp.task('html', () => {
 /*Task for CSS*/
 gulp.task('css', () => {
   gulp.src('./src/styles/main.scss')
-    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(sourcemaps.init())
+    .pipe(sass({ outputStyle: 'compressed' })
+    .on('error', function (err) {
+      return notify().write(err);
+    }))
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
       cascade: false
@@ -53,10 +57,9 @@ gulp.task('css', () => {
 /*Task for JS*/
 gulp.task('js', () => {
   gulp.src([
-    './src/vendor/jquery/dist/jquery.min.js',
-    './src/vendor/slick/dist/slick.js',
-    './src/js/parts/first.js',
-    './src/js/parts/second.js'
+    './node_modules/jquery/dist/jquery.js',
+    './node_modules/slick-carousel/slick/slick.js',
+    './src/js/main.js'
   ])
     .pipe(concat('main.js'))
     .pipe(minify({
@@ -97,6 +100,7 @@ gulp.task('fonts', () => {
   gulp.src('./src/fonts/**/*.*')
     .pipe(newer('./build/fonts/'))
     .pipe(gulp.dest('./build/fonts/'))
+    .pipe(reload({ stream: true }));
 });
 
 /* Task for file .htaccess */
