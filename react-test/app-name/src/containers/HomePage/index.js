@@ -2,48 +2,68 @@
 import React, { Component } from 'react';
 
 import TodoItem from './../../components/TodoItem';
+import SimpleInput from './../../components/SimpleInput';
+import Button from './../../components/Button';
 
 import './style.css';
 
 export default class HomePage extends Component {
+ 
+  constructor() {
+    super();
+    this.state = {
+      inputValue: '',
+      todoList: [],
+    };
+  }
+
+  handleInputChange = (event) => {
+    this.setState({
+      inputValue: event.target.value
+    })
+  }
+
+  submitTodo = () => {
+    const Obj = {
+      number: this.state.todoList.length + 1,
+      name: this.state.inputValue,
+    };
+    const todoList = [...this.state.todoList];
+    todoList.push(Obj);
+    this.setState({ todoList, inputValue: '' });
+    console.log(this.state.todoList);
+  }
 
   render() {
-    const TODO_LIST_DATA = [
-      {
-        number: 1,
-        name: 'Выучить HTML',
-      },
-      {
-        number: 2,
-        name: 'Выучить CSS',
-      },
-      {
-        number: 3,
-        name: 'Выучить JS',
-      },
-      {
-        number: 4,
-        name: 'Выучить React',
-      },
-      {
-        number: 5,
-        name: 'Выучить GIT',
-      },
-    ];
+    const { inputValue, todoList } = this.state;
 
     return (
       <div className="container">
         <h1>Todo List:</h1>
-        <ul>
+        <div>
+          <SimpleInput
+            type='text'
+            name='todoItem'
+            value={inputValue}
+            placeholder='Введите название новой задачи'
+            onChange={this.handleInputChange}
+          />
+          <Button
+            label='Add Todo'
+            onClick={this.submitTodo}
+          />
+        </div>
+        <div>
           {
-            TODO_LIST_DATA.map(item => 
+            todoList.map((item, index) => 
             <TodoItem
-              key={item.number}
-              {...item}
+              key={index}
+              number={item.number}
+              name={item.name}
             />
           )
           }
-        </ul>
+        </div>
       </div>
     );
   }
