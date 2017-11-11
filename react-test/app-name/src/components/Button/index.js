@@ -1,8 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './style.css';
+
 const Button = (props) => (
-  <button onClick={props.onClick}>
+  <button
+    onClick={props.onClick}
+    className="addButton"
+  >
     {props.label}
   </button>
 );

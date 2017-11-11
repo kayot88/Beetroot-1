@@ -14,39 +14,52 @@ export default class HomePage extends Component {
     this.state = {
       inputValue: '',
       todoList: [],
+      inputValid: true,
     };
   }
 
   handleInputChange = (event) => {
     this.setState({
-      inputValue: event.target.value
+      inputValue: event.target.value,
+      inputValid: true,
     })
   }
 
   submitTodo = () => {
-    const Obj = {
-      number: this.state.todoList.length + 1,
-      name: this.state.inputValue,
-    };
-    const todoList = [...this.state.todoList];
-    todoList.push(Obj);
-    this.setState({ todoList, inputValue: '' });
-    console.log(this.state.todoList);
+    if (this.state.inputValue) {
+      const TodoItem = this.state.inputValue;
+      const todoList = [...this.state.todoList];
+      todoList.push(TodoItem);
+      this.setState({ todoList, inputValue: '' })
+    } else {
+      this.setState({ inputValid: false })
+    }
+  }
+
+  deleteTodoItem = (name) => {
+    const FILTERED_LIST = this.state.todoList.filter(item => item !== name);
+    this.setState({
+      todoList: FILTERED_LIST
+    });
   }
 
   render() {
-    const { inputValue, todoList } = this.state;
+    const { inputValue, todoList, inputValid } = this.state;
 
     return (
       <div className="container">
-        <h1>Todo List:</h1>
-        <div>
+        <h1 className="pageTitle">Todo List:</h1>
+        <div
+          className='formWrapper'
+        >
           <SimpleInput
             type='text'
             name='todoItem'
             value={inputValue}
-            placeholder='Введите название новой задачи'
+            placeholder='Text new todo...'
             onChange={this.handleInputChange}
+            isvalid={inputValid}
+            errortext='You are triyng to add empty todo item. Please, fill that input.'
           />
           <Button
             label='Add Todo'
@@ -58,8 +71,9 @@ export default class HomePage extends Component {
             todoList.map((item, index) => 
             <TodoItem
               key={index}
-              number={item.number}
-              name={item.name}
+              number={index + 1}
+              name={item}
+              deleteTodoItem={() => this.deleteTodoItem(item)}
             />
           )
           }
