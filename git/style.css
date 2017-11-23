@@ -6,3 +6,10 @@ body {
   margin: 0;
   padding: 100px;
 }
+img {
+  padding: 0;
+  display: block;
+}
+h2 {
+  display: block;
+}
