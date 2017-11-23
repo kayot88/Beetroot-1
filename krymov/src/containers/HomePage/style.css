@@ -1,0 +1,55 @@
+.main__container {
+  width: 100%;
+  min-height: 100vh;
+  background: url('./../../assets/img/carl-heyerdah.jpg') center no-repeat;
+  background-size: cover;
+}
+
+.container__list--todo {
+  width: 100%;
+}
+
+.container__list--done {
+  width: 100%;
+}
+
+.containerTitle {
+  padding: 10px 0;
+  font: 700 36px/1 Montserrat,
+  sans-serif;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fcfcfc;
+  /* color: #ffe400; */
+  /* color: #000; */
+  color: #dc0000;
+}
+
+.container__list-title {
+  margin-left: 30px;
+  padding: 0 0 10px 0;
+  font: 700 26px/1 Montserrat, sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fcfcfc;
+  color: #ffe400;
+}
+
+.formWrapper {
+  position: relative;
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.btn__wrapper {
+  display: flex;
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+}
+
+.btn__wrapper--hidden {
+  display: none;
+}
+

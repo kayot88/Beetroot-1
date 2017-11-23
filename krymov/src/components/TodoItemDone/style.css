@@ -1,0 +1,32 @@
+.todoItemDone {
+  position: relative;
+  min-height: 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 !important;
+  border: none !important;
+  font: 400 14px/1 Montserrat, sans-serif;
+  letter-spacing: 0.04em;
+  color: #fcfcfc;
+  margin: 20px 0 0 30px;
+}
+
+.todoItemDone:last-of-type {
+  margin: 20px 0 20px 30px;
+}
+
+.input__field {
+  width: 100%;
+}
+
+.finish {
+  position: absolute;
+  max-width: 100% !important;
+  top: -14px;
+  left: 0;
+  font: 300 12px/1 Montserrat,
+  sans-serif !important;
+  color: #fcfcfc;
+  color: #ffe400 !important;
+}

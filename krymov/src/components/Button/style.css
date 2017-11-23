@@ -1,0 +1,61 @@
+.addButton {
+  width: 100px;
+  height: 40px;
+  margin-left: 10px;
+  padding: 0 5px;
+  /* border: 1px solid #000; */
+  border: none;
+  background-color: rgba(255, 255, 255, 1);
+  font: 400 14px/1 Montserrat,
+  sans-serif;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  outline: none;
+}
+
+.addButton:hover {
+  background-color: rgba(0, 0, 0, 1);
+  color: #fcfcfc;
+  color: #ffe400;
+}
+
+.delSelButton,
+.compSelButton {
+  width: 160px;
+  height: 26px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  font: 300 14px/1 Montserrat,
+  sans-serif;
+}
+
+.delSelButton {
+  margin-right: 5px;
+}
+
+.deleteButton,
+.doneButton {
+  width: 90px;
+  height: 26px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.9);
+  font: 500 14px/1 Montserrat,
+  sans-serif;
+}
+
+.deleteButton {
+  margin: 0 5px;
+}
+
+.delSelButton:hover,
+.compSelButton:hover,
+.doneButton:hover,
+.deleteButton:hover {
+  background-color: rgba(0, 0, 0, 1);
+  color: #fcfcfc;
+  color: #ffe400;
+}
+
+
